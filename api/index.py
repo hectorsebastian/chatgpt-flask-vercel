@@ -29,3 +29,7 @@ def chat():
     except Exception as e:
         print(e)
         return jsonify({"error": "Error al consultar la API"}), 500
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
